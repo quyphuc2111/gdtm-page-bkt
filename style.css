@@ -1,0 +1,575 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@500&display=swap');
+:root {
+    --bg: #1a1e24;
+    --color: #eee;
+    --font: Montserrat, Roboto, Helvetica, Arial, sans-serif;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+}
+.container {
+    font-family: sans-serif;
+    overflow-x: hidden;
+  
+}
+
+.container .banner {
+    /* width: 100vw; */
+    /* height: 100vh; */
+    display: flex;
+ 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url("bg.png"); /* fallback for older browsers */
+
+background-image: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.1 ) 100%), url("bg.png");
+   
+}
+.banner_pc {
+    width: 90%;
+}
+.banner .banner_tab {
+   display: none;
+}
+.banner_tab .card {
+    min-width: 580px;
+    box-shadow: 5px 8px #888888;
+    background: #eee;
+    padding: .5rem 2rem 4rem ;
+    position: relative;
+    margin: 20px 0;
+    color: #fff;
+}
+.banner_tab .card .card_title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.banner_tab .card .card_body {
+    margin-left: 30px;
+}
+.banner_tab .card a {
+    position: absolute;
+    right: 2rem;
+    background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 30px;
+}
+.banner .left-column {
+    width: 60%;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Baloo Thambi 2', cursive;
+   
+}
+.banner .left-column .title {
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+    
+}
+.banner .left-column .content {
+    width: 80%;
+    font-size: 1.4rem;
+    color: #333;
+    background-color: #e5e5e5;
+    border-radius: 30px;
+    padding: 1rem;
+    overflow: hidden;
+   
+}
+.banner .left-column .content .text {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 20px;
+    
+    margin: 12px 0;
+    
+}
+.banner .left-column .content i {
+    margin:0 10px;
+    font-size: 1.6rem;
+}
+ 
+.banner .left-column .see-more-btn {
+    text-align: right;
+}
+.banner .left-column .see-more-btn  .wrapper {
+    padding: 0 1rem 1rem 0;
+    filter: url('#goo');
+    }
+.banner .left-column .see-more-btn .button {
+    display: inline-block;
+    text-align: center;
+    background: var(--white);
+    color: var(--bg);
+    font-weight: bold;
+    padding: 1.18em 1.32em 1.03em;
+    line-height: 1;
+    border-radius: 1em;
+    position: relative;
+    min-width: 8.23em;
+    text-decoration: none;
+    font-family: var(--font);
+    font-size: 1.25rem;
+    }
+    
+.banner .left-column .see-more-btn .button:before,
+.banner .left-column .see-more-btn .button:after {
+        width: 4.4em;
+        height: 2.95em;
+        position: absolute;
+        content: "";
+        display: inline-block;
+        background: var(--white);
+        border-radius: 50%;
+        transition: transform .6s ease;
+        transform: scale(0);
+        z-index: -1;
+    }
+    
+.banner  .left-column .see-more-btn .button:before {
+        top: -25%;
+        left: 20%;
+    }
+    
+.banner .left-column .see-more-btn .button:after {
+        bottom: -25%;
+        right: 20%;
+    }
+    
+.banner .left-column .see-more-btn .button:hover:before,
+.banner .left-column .see-more-btn .button:hover:after {
+        transform: none;
+    }
+
+
+.banner .right-column {
+    width: 40%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+}
+.banner .right-column svg{
+    width: 85%
+}
+
+.d-none {
+    display: none;
+}
+
+/* about us */
+.about_us {
+    display: flex;
+    position: relative;
+    /* width: 100vw; */
+    background: #596164;
+    font-family: 'Baloo Tammudu 2', cursive;
+}
+
+.about_us .about {
+    flex: 1;
+    padding: 4rem 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.about_us .about p {
+    font-size: 1.15rem;
+    line-height: 1.5;
+}
+.about_us .about_left {
+    background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
+    color: #fff;
+}
+.about_us .about_left h2 {
+    
+    margin: 15px 0;
+}
+.about_us .about_right {
+    background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+}
+.about_us .about_right img {
+    width: 100%;
+}
+
+/* our service */
+.our_service .our_service-body {
+    position: relative;
+}
+.our_service .our_service-header {
+    /* padding: 5rem 8rem 17rem 8rem; */
+    background:#424242 ;
+    text-align: center;
+    color: white;
+    height: 500px;
+    padding: 5rem 8rem 0 8rem;
+}
+.our_service .our_service-header h1 {
+    margin: 1rem 0;
+}
+.our_service .our_service-content {
+   background: #5e84f1;
+   /* padding: 15rem 8rem 5rem 8rem; */
+   height:500px;
+   display: flex;
+   padding: 13rem 8rem 0 8rem;
+   justify-content: center;
+   align-items: center;
+}
+.our_service .our_service-content .content-left{
+    width: 80%;
+    color: white;
+    padding: 0 15rem 3rem 0;
+}
+.our_service .our_service-content  .content-left h2 {
+    margin: 2rem 0;
+}
+.our_service .our_service-content  .content-right div{
+    width: 20%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    align-self: center;
+    text-align: center;
+    
+}
+.our_service .our_service-content  .content-right i {
+    font-size: 6rem;
+}
+
+.our_service .intro_card {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    display: flex;
+  
+
+   
+
+}
+.our_service .intro_card .card {
+    height: 300px;
+    width: 230px;
+   
+    background: #fff;
+    margin-right: 2rem;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.our_service .intro_card .card p {
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+.our_service .intro_card img {
+    width: 50%;
+   
+}
+
+
+.introduce {
+    padding: 5rem;
+    background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+    font-family: 'Itim', cursive; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.introduce .introduce_title {
+    margin-bottom: 30px;
+   display: flex;
+   justify-content: flex-start;
+    
+}
+
+.introduce .introduce_card {
+   margin-bottom: 20px;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   padding: 1.5rem;
+   border-radius: 30px;
+   background: #fff;
+   max-width: 730px;
+}
+.introduce .introduce_card img {
+    height: 80px;
+    width: 80px;
+    margin-right: 20px;
+   
+}
+
+.introduce .company-name {
+	position: relative;
+}
+.introduce .company-name h2 {
+	position: absolute;
+	transform: translate(20%,-30%);
+	font-size: 4rem;
+    border-radius: 30px;
+    padding: 0;
+}
+.introduce .company-name h2:nth-child(1) {
+	color: transparent;
+	-webkit-text-stroke: 1px #00FF00;
+}
+.introduce .company-name h2:nth-child(2) {
+	color: #00FF00;
+	animation: wave 3s ease-in-out infinite;
+}
+@keyframes wave {
+	0%,100% 
+	{
+		clip-path: polygon(0 42%, 13% 48%, 26% 55%, 41% 64%, 56% 65%, 69% 58%, 84% 45%, 100% 38%, 100% 100%, 0% 100%);
+	}
+	50%
+	{
+		clip-path: polygon(0 63%, 14% 57%, 25% 50%, 40% 42%, 56% 40%, 71% 44%, 84% 50%, 100% 60%, 100% 100%, 0% 100%);
+	}
+}
+
+
+
+.client-say {
+    height: 500px;
+    background: #11222b;
+   
+}
+.client-say .client-say-header {
+    padding: 6rem 0 3rem;
+    color: #fff;
+}
+.client-say .client-say-header h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+.client-say .client-say-body {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    
+
+}
+.client-say .client-say-body .card{
+   height: 230px;
+   max-width: 600px;
+    background: #fff ;
+    margin: 1rem;
+    padding: 2rem 1.3rem;
+    position: relative;
+    font-family: 'Itim', cursive;
+    
+}
+.client-say .client-say-body .card p {
+    color: #000;
+    font-style: italic;
+    
+}
+.client-say .client-say-body .card span {
+    color: #7997e6;
+    position: absolute;
+    right: 1.3rem;
+    bottom: 2.5rem;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 740px) {
+    .banner .right-column {
+        display: none;
+    }
+    .banner .left-column {
+        width: 100%;
+        padding: 1rem;
+    }
+    .banner_pc {
+        display: none;
+    }
+    .banner .banner_tab {
+        display: block;
+    }
+    .banner_tab .card {
+        min-width: 100%;
+        padding: .5rem 1rem 3.4rem;
+    }
+    .banner_tab .card .card_title {
+        font-size: 1.5rem;
+    }
+    .banner_tab .card a {
+        padding: 4px 10px;
+    }
+    .banner_tab .card a {
+        right: 1rem;
+        bottom: .5rem;
+    }
+    .introduce {
+        padding: 1rem;
+    }
+    .introduce .company-name h2 {
+        transform: translate(-100%,32%);
+        font-size: 3.5rem;
+    }
+    .introduce .introduce_card {
+        height: 100px;
+        margin: 20px 0;
+       
+    }
+    .introduce .introduce_card img {
+        height: 50px;
+        width: 50px;
+    }
+    .introduce .introduce_card .content p {
+        width:100%;
+        white-space: pre-wrap; 
+        overflow: hidden; 
+        text-overflow: ellipsis; 
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+    }
+.about_us {
+    flex-direction: column;
+}
+.about_us .about {
+    padding: 1rem 1.2rem;
+}
+.about_us .about_left h2 {
+    font-size: 2rem;
+}
+.about_us .about_right img  {
+    width: 80%;
+}
+.our_service .our_service-header {
+    padding: 1rem 0 1rem;
+    height: 400px;
+}
+.our_service .our_service-content .content-left {
+    padding: 1rem;
+    width: 100%;
+}
+.our_service-card {
+    display: none;
+}
+.our_service .our_service-content {
+    padding: 1rem 1.1rem 12rem;
+    flex-direction: column;
+    position: relative;
+    height: 600px;
+}
+.our_service .our_service-content .content-right i{
+  font-size: 3rem;
+  
+}
+.our_service .our_service-content .content-right div {
+    position: absolute;
+    right: 4rem;
+}
+.client-say {
+    height: 900px;
+   
+}
+.client-say .client-say-header {
+    padding: 2rem 0 ;
+}
+.client-say .client-say-header h1 {
+    padding: 0 10px;
+}
+.client-say .client-say-body {
+    flex-direction: column;
+}
+.client-say .client-say-body .card {
+    padding: 1rem 1.3rem;
+}
+.client-say .client-say-body .card span {
+    bottom: 1.5rem;
+}
+    }
+    
+
+@media screen and (min-width: 740px) and (max-width: 1024px) {
+    
+.banner .right-column {
+    display: none;
+}
+.banner .left-column {
+    width: 100%;
+    padding: 1rem;
+}
+.banner_pc {
+    display: none;
+}
+.banner .banner_tab {
+    display: block;
+}
+.introduce .company-name h2 {
+    font-size: 3rem;
+}
+.about_us .about {
+    padding: 1rem;
+}
+.about_us .about_right img {
+    width:80%;
+}
+.our_service .our_service-header {
+    padding: 2rem 3rem 0;
+    height: 400px;
+}
+.our_service .our_service-content {
+    height: 400px;
+    padding: 4rem 2rem 0 2rem ;
+}
+.our_service .intro_card .card {
+    height: 190px;
+    width: 160px;
+}
+.our_service .our_service-content .content-left {
+    padding: 0 3rem 0 0;
+}
+
+.our_service .our_service-content .content-right i {
+    font-size: 4rem;
+}
+.client-say {
+    padding: 1rem;
+}
+.client-say .client-say-header {
+    padding: 2rem 0 2rem;
+}
+
+
+}
+   
